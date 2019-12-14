@@ -1,0 +1,160 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$aiaUOIBcxggt$nRw5PtgJ9j7PwtGkVksS8M4KlnI/ck77BnEAfgRaGOE=",
+    "last_login": "2019-12-14T10:24:35.980Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-12-14T03:16:53.449Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "webapp.comments",
+  "pk": 1,
+  "fields": {
+    "text": "Text and text",
+    "comment_photo": 16,
+    "commnent_author": 1,
+    "created_at": "2019-12-14T10:34:24.707Z"
+  }
+},
+{
+  "model": "webapp.comments",
+  "pk": 2,
+  "fields": {
+    "text": "test and test and test",
+    "comment_photo": 14,
+    "commnent_author": 1,
+    "created_at": "2019-12-14T10:34:39.662Z"
+  }
+},
+{
+  "model": "webapp.comments",
+  "pk": 3,
+  "fields": {
+    "text": "wooooowww,  amazing!",
+    "comment_photo": 23,
+    "commnent_author": 1,
+    "created_at": "2019-12-14T12:12:43.798Z"
+  }
+},
+{
+  "model": "webapp.gallery",
+  "pk": 10,
+  "fields": {
+    "photo": "uploads/GLADSWOOD_CNR___DRINKS__FOOD_YGSh6Mq.png",
+    "signature": "test5",
+    "created_at": "2019-12-14T07:53:09.615Z",
+    "amount_of_likes": 5,
+    "author": 1
+  }
+},
+{
+  "model": "webapp.gallery",
+  "pk": 11,
+  "fields": {
+    "photo": "uploads/GLADSWOOD_CNR___DRINKS__FOOD_f7bU4ts.png",
+    "signature": "test55",
+    "created_at": "2019-12-14T08:00:44.384Z",
+    "amount_of_likes": 2,
+    "author": 1
+  }
+},
+{
+  "model": "webapp.gallery",
+  "pk": 12,
+  "fields": {
+    "photo": "uploads/GLADSWOOD_CNR___DRINKS__FOOD_LaqUsti.png",
+    "signature": "test56",
+    "created_at": "2019-12-14T08:01:52.402Z",
+    "amount_of_likes": 4,
+    "author": 1
+  }
+},
+{
+  "model": "webapp.gallery",
+  "pk": 13,
+  "fields": {
+    "photo": "uploads/GLADSWOOD_CNR___DRINKS__FOOD_z7MnAns.png",
+    "signature": "test2234",
+    "created_at": "2019-12-14T08:50:13.935Z",
+    "amount_of_likes": 2,
+    "author": 1
+  }
+},
+{
+  "model": "webapp.gallery",
+  "pk": 14,
+  "fields": {
+    "photo": "uploads/GLADSWOOD_CNR___DRINKS__FOOD_8XayJnr.png",
+    "signature": "test2234",
+    "created_at": "2019-12-14T08:50:55.492Z",
+    "amount_of_likes": 2,
+    "author": 1
+  }
+},
+{
+  "model": "webapp.gallery",
+  "pk": 15,
+  "fields": {
+    "photo": "uploads/GLADSWOOD_CNR___DRINKS__FOOD_0lE80ei.png",
+    "signature": "test3",
+    "created_at": "2019-12-14T08:51:28.019Z",
+    "amount_of_likes": 4534,
+    "author": 1
+  }
+},
+{
+  "model": "webapp.gallery",
+  "pk": 16,
+  "fields": {
+    "photo": "uploads/GLADSWOOD_CNR___DRINKS__FOOD_Yd1Jvnb.png",
+    "signature": "test3",
+    "created_at": "2019-12-14T08:52:26.963Z",
+    "amount_of_likes": 4534,
+    "author": 1
+  }
+},
+{
+  "model": "webapp.gallery",
+  "pk": 19,
+  "fields": {
+    "photo": "uploads/GLADSWOOD_CNR___DRINKS__FOOD_Gq5s4Aw.png",
+    "signature": "test3w232",
+    "created_at": "2019-12-14T08:56:27.793Z",
+    "amount_of_likes": 23,
+    "author": 1
+  }
+},
+{
+  "model": "webapp.gallery",
+  "pk": 20,
+  "fields": {
+    "photo": "uploads/GLADSWOOD_CNR___DRINKS__FOOD_zKD0Wx5.png",
+    "signature": "test3",
+    "created_at": "2019-12-14T08:57:02.413Z",
+    "amount_of_likes": 234325,
+    "author": 1
+  }
+},
+{
+  "model": "webapp.gallery",
+  "pk": 23,
+  "fields": {
+    "photo": "uploads/GLADSWOOD_CNR___DRINKS__FOOD_C3rmvVE.png",
+    "signature": "new",
+    "created_at": "2019-12-14T09:29:26.950Z",
+    "amount_of_likes": 34,
+    "author": 1
+  }
+}
+]
