@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'webapp.apps.WebappConfig',
     'api.apps.ApiConfig',
     'rest_framework',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
+    'widget_tweaks'
 ]
 
 MIDDLEWARE = [
