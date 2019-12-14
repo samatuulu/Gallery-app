@@ -17,6 +17,7 @@
     </div>
             <a href="{% url 'webapp:detail' gal.pk %}" class="btn btn-primary">More</a>
             <p><a href="{% url 'webapp:update' gal.pk %}" class="btn btn-primary">Update</a></p>
+            <p><a href="{% url 'webapp:delete' gal.pk %}" class="btn btn-primary">Delete</a></p>
     {% endfor %}
 
     </div>

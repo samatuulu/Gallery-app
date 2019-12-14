@@ -3,7 +3,7 @@ from audioop import reverse
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from webapp.models import Gallery
 
@@ -40,3 +40,16 @@ class GalleryUpdateView(UpdateView):
 
     def get_success_url(self):
         return reverse_lazy('webapp:index')
+
+
+class GalleryDeleteView(DeleteView):
+    model = Gallery
+    template_name = 'delete.html'
+    success_url = reverse_lazy('webapp:index')
+    context_object_name = 'gallery'
+
+    def delete(self, request, *args, **kwargs):
+        gallery = self.object = self.get_object()
+        gallery.delete()
+        return HttpResponseRedirect(self.get_success_url())
+
