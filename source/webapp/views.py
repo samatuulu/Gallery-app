@@ -1,11 +1,34 @@
-from audioop import reverse
-
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from webapp.models import Gallery
+
+
+def login_view(request):
+    context = {}
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            next_url = request.GET.get('next', '')
+            if next_url:
+                return redirect(next_url)
+            return redirect('webapp:index')
+        else:
+            context['has_error'] = True
+    return render(request, 'registration/login.html', context=context)
+
+
+@login_required
+def logout_view(request):
+    logout(request)
+    return redirect('webapp:index')
 
 
 class IndexView(ListView):
@@ -14,7 +37,7 @@ class IndexView(ListView):
     context_object_name = 'gallery'
 
     def get_queryset(self):
-        return Gallery.objects.all()
+        return Gallery.objects.order_by('-created_at')
 
 
 class GalleryDetailView(DetailView):
@@ -52,4 +75,3 @@ class GalleryDeleteView(DeleteView):
         gallery = self.object = self.get_object()
         gallery.delete()
         return HttpResponseRedirect(self.get_success_url())
-
