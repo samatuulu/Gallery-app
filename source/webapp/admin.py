@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Gallery, Comments, UserPostLikes
 
-# Register your models here.
+admin.site.register(Gallery)
+admin.site.register(Comments)
+admin.site.register(UserPostLikes)
