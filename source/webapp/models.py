@@ -10,7 +10,7 @@ class Gallery(models.Model):
     author = models.ForeignKey(User, related_name='gallery_user', verbose_name='User', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.author
+        return str(self.author)
 
     class Meta:
         verbose_name = 'Gallery'
@@ -24,7 +24,7 @@ class Comments(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Created at')
 
     def __str__(self):
-        return self.commnent_author
+        return str(self.commnent_author)
 
     class Meta:
         verbose_name = 'Comment'

@@ -5,7 +5,7 @@ virtualenv
 __pycache__
 *.pyc
 *.log
-uploads
+source/uploads
 *.sqlite3
 settings_local.py
-uploads
+source/uploads
