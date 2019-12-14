@@ -15,7 +15,9 @@
     <div class="card-footer">
       <small class="text-muted">{{ gal.created_at }}</small>
     </div>
+            <a href="{% url 'webapp:detail' gal.pk %}" class="btn btn-primary">More</a>
     {% endfor %}
+
     </div>
     <br/>
 {% endblock %}
