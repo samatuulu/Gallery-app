@@ -5,7 +5,7 @@ from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from webapp.models import Gallery
+from webapp.models import Gallery, Comments
 
 
 def login_view(request):
@@ -44,6 +44,14 @@ class GalleryDetailView(DetailView):
     template_name = 'detail.html'
     model = Gallery
     context_object_name = 'gallery'
+
+    def get_context_data(self, **kwargs):
+        pk = self.kwargs.get('pk')
+        context = super().get_context_data(**kwargs)
+        photo = pk
+        comments = Comments.objects.filter(comment_photo=photo)
+        context['comments'] = comments
+        return context
 
 
 class GalleryCreateView(CreateView):

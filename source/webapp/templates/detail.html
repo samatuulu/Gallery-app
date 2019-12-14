@@ -8,4 +8,12 @@
         </div>
         <p><b>Created at:</b> {{ gallery.created_at }}, <b>Author</b>: {{ gallery.signature }}, <b>Likes:</b>{{ gallery.amount_of_likes }}</p>
     </div>
+
+
+    {% for comment in comments %}
+    <p> Author: {{ comment.commnent_author }}</p>
+    <p> Text: {{ comment.text }}</p>
+    <hr>
+ {% endfor %}
+
 {% endblock %}

@@ -10,7 +10,7 @@ class Gallery(models.Model):
     author = models.ForeignKey(User, related_name='gallery_user', verbose_name='User', on_delete=models.CASCADE)
 
     def __str__(self):
-        return str(self.author)
+        return self.signature
 
     class Meta:
         verbose_name = 'Gallery'
